@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Product_Management.Infrastructure.Models
+namespace Product_Management-API.Infrastructure.Models
 {
     public class Product
     {

@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Product_Management.Infrastructure.Models;
+using Product_Management-API.Infrastructure.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Product_Management.Infrastructure
+namespace Product_Management-API.Infrastructure
 {
     public partial class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
