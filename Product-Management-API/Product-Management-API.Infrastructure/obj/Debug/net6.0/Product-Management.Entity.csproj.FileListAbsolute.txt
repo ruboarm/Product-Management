@@ -1,5 +1,0 @@
-C:\Users\Tatev\source\repos\Product-Management\Product-Management.Entity\obj\Debug\net6.0\Product-Management.Entity.csproj.AssemblyReference.cache
-C:\Users\Tatev\source\repos\Product-Management\Product-Management.Entity\obj\Debug\net6.0\Product-Management.Entity.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Tatev\source\repos\Product-Management\Product-Management.Entity\obj\Debug\net6.0\Product-Management.Entity.AssemblyInfoInputs.cache
-C:\Users\Tatev\source\repos\Product-Management\Product-Management.Entity\obj\Debug\net6.0\Product-Management.Entity.AssemblyInfo.cs
-C:\Users\Tatev\source\repos\Product-Management\Product-Management.Entity\obj\Debug\net6.0\Product-Management.Entity.csproj.CoreCompileInputs.cache
