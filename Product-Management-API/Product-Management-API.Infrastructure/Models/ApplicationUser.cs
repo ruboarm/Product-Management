@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Product_Management-API.Infrastructure.Models
+namespace Product_Management_API.Infrastructure.Models
 {
     public class ApplicationUser : IdentityUser
     {
