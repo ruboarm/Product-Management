@@ -45,6 +45,9 @@ builder.Services.AddAuthentication(options =>
 });
 builder.Services.AddAuthorization();
 
+// Add custom services
+builder.Services.AddScoped<ProductService>();
+
 builder.Services.AddControllers();
 
 // Lowercase urls

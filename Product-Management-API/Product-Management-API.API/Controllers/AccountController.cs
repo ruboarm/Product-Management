@@ -29,7 +29,7 @@ namespace Product_Management_API.API.Controllers
         public async Task<IActionResult> Login([FromBody] LoginModel model)
         {
             //var test = _configuration.GetSection("User");
-
+            
             var user = await _userManager.FindByNameAsync(model.UserName);
             if (user != null)
             {
