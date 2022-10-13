@@ -19,7 +19,7 @@ namespace Product_Management_API.API.Controllers
 
         // GET: api/<ProductsController>
         [HttpGet]
-        public async Task<List<ProductModel>> Get()
+        public async Task<IActionResult> Get()
         {
             List<ProductModel> Products = null;
             try
@@ -31,22 +31,22 @@ namespace Product_Management_API.API.Controllers
                 throw;
             }
 
-            return Products;
+            return new JsonResult(Products);
         }
 
         // GET api/<ProductsController>/5
         [HttpGet("{id}")]
-        public async Task<Product?> Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
             var Product = await _productService.GetProductByIdAsync(id);
 
-            return Product;
+            return new JsonResult(Product);
         }
 
         // POST api/<ProductsController>
         [HttpPost]
         [Authorize]
-        public async Task<Product?> Post([FromBody] Product Product)
+        public async Task<IActionResult> Post([FromBody] Product Product)
         {
             Product? updatedProduct = null;
             if (ModelState.IsValid)
@@ -63,14 +63,13 @@ namespace Product_Management_API.API.Controllers
                 updatedProduct = await _productService.GetProductByIdAsync(Product.Id);
             }
 
-            return updatedProduct;
+            return new JsonResult(updatedProduct);
         }
 
         // PUT api/<ProductsController>/5
         [HttpPut("{id}")]
-        //public async void Put(int id, [FromBody] Product Product)
         [Authorize]
-        public async Task<Product> Put(int id, [FromBody] Product Product)
+        public async Task<IActionResult> Put(int id, [FromBody] Product Product)
         {
             if (ModelState.IsValid)
             {
@@ -84,7 +83,7 @@ namespace Product_Management_API.API.Controllers
                 }
             }
 
-            return Product;
+            return new JsonResult(Product);
         }
 
         // DELETE api/<ProductsController>/5
