@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Product_Management_API.Infrastructure;
 using Product_Management_API.Infrastructure.Models;
 
 namespace Product_Management_API.Services
@@ -13,9 +12,11 @@ namespace Product_Management_API.Services
             _context = context;
         }
 
-        public async Task<List<Product>> GetProductsAsync()
+        public async Task<List<ProductModel>> GetProductsAsync()
         {
-            List<Product> list = await _context.Products.ToListAsync();
+            List<ProductModel> list = await _context.Products
+                .Select(p => new ProductModel() { Id = p.Id, Name = p.Name, Available =  p.Available, Price = p.Price })
+                .ToListAsync();
             return list;
         }
 
